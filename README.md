@@ -80,7 +80,7 @@ Encoder部分采用的VGG16， Decoder部分是与之对称的。(其实结构�
 
 ```也是非常完美的!!!!!!```
 
-<img src="./files/loss2.png" style="zoom: 100%" div align=center />
+<img src="./files/loss2.png" style="zoom: 100%" align="center">
 
 
 ### (2) Encoder激活函数
