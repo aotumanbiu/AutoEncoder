@@ -157,7 +157,7 @@ train_data = AnimeData(dataRoot=args.dataSet, subFold="train", transform=Transfo
 
 ####  (d) 权重下载
 
-##### a. 权重_无损失函数：Link: https://pan.baidu.com/s/1EExW9EtKx55JGym0zOgemw   pw: 8xit 
+** a. 权重_无损失函数：Link: https://pan.baidu.com/s/1EExW9EtKx55JGym0zOgemw   pw: 8xit **
 
 **b. 权重_Sigmoid：Link: https://pan.baidu.com/s/1nL6rM7ID8OrDCjfFXo7T3w   pw: fi18**
 
