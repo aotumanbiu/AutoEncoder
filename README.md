@@ -171,7 +171,7 @@ train_data = AnimeData(dataRoot=args.dataSet, subFold="train", transform=Transfo
 
 ## 2. VAE
 
-## 3. 不可说
+## 3. 结合Transformer
 
 ## 4. 。。。。。。
 
