@@ -167,7 +167,7 @@ train_data = AnimeData(dataRoot=args.dataSet, subFold="train", transform=Transfo
 
 # 未完待续（其它尝试）。。。。。。
 
-## 1. 单独把Decoder拿出来， 喂给它随机特征图，看会的到什么
+## 1. 单独把Decoder拿出来， 喂给它随机特征图，看会得到什么
 
 ## 2. VAE
 
