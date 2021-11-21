@@ -164,74 +164,11 @@ train_data = AnimeData(dataRoot=args.dataSet, subFold="train", transform=Transfo
 
 
 
--------
-
-
-
-### 5. 测试
-
-#### (1). 随机噪声
-
-##### a. 随机化输入
-
-```feed_noise_inputs.py```
-
-```python
-inputs = torch.rand((256, 3, 224, 224)).to(device)
-data = DataLoader(inputs, batch_size=8)
-```
-
-输入可视化：
-
-<img src="./files/lala0.png">
-
-对应结果可视化：
-
-<img src="./files/lala2.png">
-
-
-
-##### b. 随机初始化Encoder的输出, 用Decoder解码
-
-```feed_noise_middle.py```
-
-```python
-# ---------------------------------------------- #
-# 随机初始化噪声
-# ---------------------------------------------- #
-inputs = torch.rand((256, 512, 7, 7)).to(device)
-data = DataLoader(inputs, batch_size=16)
-```
-
-结果可视化：
-
-<img src="./files/noise.png">
-
-
-
-#### (2). 测试集
-
-输入可视化：
-
-<img src="./files/test0.png">
-
-对应结果可视化：
-
-<img src="./files/test1.png">
-
-
-
-
-
-
-
-
-
 
 
 # 未完待续（其它尝试）。。。。。。
 
-## 1. ~~单独把Decoder拿出来， 喂给它随机特征图，看会的到什么~~
+## 1. 单独把Decoder拿出来， 喂给它随机特征图，看会的到什么
 
 ## 2. VAE
 
