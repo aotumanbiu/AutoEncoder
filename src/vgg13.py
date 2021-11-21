@@ -100,6 +100,6 @@ class AutoEncoder(nn.Module):
 
 if __name__ == '__main__':
     ae = AutoEncoder(in_channels=3, init_weights=False).cuda()
-    a = torch.randn((3, 3, 224, 224)).cuda()
+    a = torch.rand((3, 3, 224, 224)).cuda()
     out = ae(a)
     print(0)
