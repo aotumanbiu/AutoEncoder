@@ -86,7 +86,7 @@ Encoder部分采用的VGG16， Decoder部分是与之对称的。(其实结构�
 
 ### (2) Encoder激活函数
 
-#### （a).  不采用激活函数
+#### (a).  不采用激活函数
 
 ```python
 if nums == 1:
@@ -164,11 +164,70 @@ train_data = AnimeData(dataRoot=args.dataSet, subFold="train", transform=Transfo
 
 
 
+-----
+
+
+
+### 5. 测试
+
+#### (1). 输入为噪声
+
+##### a. 随机初始化输入
+
+```feed_noise_inputs.py```
+
+```python
+inputs = torch.rand((256, 3, 224, 224)).to(device)
+data = DataLoader(inputs, batch_size=8)
+```
+
+输入可视化：
+
+<img src="./files/lala0.png" style="zoom: 100%">
+
+输出可视化：
+
+<img src="./files/lala2.png" style="zoom: 100%">
+
+
+
+##### b. 随机初始Decoder的输出, 然后用Decoder解码
+
+```feed_noise_middle.py```
+
+```python
+# ---------------------------------------------- #
+# 随机初始化噪声
+# ---------------------------------------------- #
+inputs = torch.rand((256, 512, 7, 7)).to(device)
+data = DataLoader(inputs, batch_size=8)
+```
+
+输出可视化：
+
+<img src="./files/noise.png" style="zoom: 100%">
+
+------
+
+#### (2). 输入为测试集
+
+输入可视化：
+
+<img src="./files/test0.png" style="zoom: 100%">
+
+输出可视化：
+
+<img src="./files/test1.png" style="zoom: 100%">
+
+
+
+--------
+
 
 
 # 未完待续（其它尝试）。。。。。。
 
-## 1. 单独把Decoder拿出来， 喂给它随机特征图，看会的到什么
+## 1. ~~单独把Decoder拿出来， 喂给它随机特征图，看会的到什么~~
 
 ## 2. VAE
 
