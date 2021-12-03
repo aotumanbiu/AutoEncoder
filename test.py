@@ -24,7 +24,7 @@ writer = SummaryWriter(logdir='logs')
 net = model.to(device)
 net.eval()
 tqdm_iter = tqdm(enumerate(dataset), total=len(dataset))
-tqdm_iter.set_description("Test: ")
+tqdm_iter.set_description("Test3: ")
 for idx, data in tqdm_iter:
     with torch.no_grad():
         inputs = data.to(device)

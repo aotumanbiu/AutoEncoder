@@ -8,7 +8,6 @@ from tqdm import tqdm
 device = torch.device("cuda")
 writer = SummaryWriter(logdir="logs")
 
-
 inputs = torch.rand((256, 3, 224, 224)).to(device)
 data = DataLoader(inputs, batch_size=8)
 
@@ -16,11 +15,10 @@ model_state_dict = torch.load("Epoch100-Sigmoid-Total_Loss0.4214.pth", map_locat
 model = AutoEncoder()
 model.load_state_dict(model_state_dict)
 
-
 net = model.to(device)
 net.eval()
 tqdm_iter = tqdm(enumerate(data), total=len(data))
-tqdm_iter.set_description("Test")
+tqdm_iter.set_description("Test3")
 for idx, data in tqdm_iter:
     with torch.no_grad():
         inputs = data.to(device)
